@@ -1,44 +1,70 @@
-import React, { useState } from "react";
-import "./nav-bar.css";
+import React, { useEffect, useState } from "react";
+import { ReactComponent as ArrowDown } from "../../assets/icons/arrow-down.svg";
+import { ReactComponent as MenuExit } from "../../assets/icons/exit-menu.svg";
+import { ReactComponent as Menu } from "../../assets/icons/menu.svg";
+import { ReactComponent as Advisor } from "../../assets/icons/socials/advisor.svg";
+import { ReactComponent as Facebook } from "../../assets/icons/socials/facebook.svg";
 import { ReactComponent as Instagram } from "../../assets/icons/socials/instagram.svg";
 import { ReactComponent as TG } from "../../assets/icons/socials/tg.svg";
 import { ReactComponent as Whatsapp } from "../../assets/icons/socials/whatsapp.svg";
-import { ReactComponent as Facebook } from "../../assets/icons/socials/facebook.svg";
-import { ReactComponent as Advisor } from "../../assets/icons/socials/advisor.svg";
-import { ReactComponent as ArrowDown } from "../../assets/icons/arrow-down.svg";
-import { ReactComponent as Menu } from "../../assets/icons/menu.svg";
-import { ReactComponent as MenuExit } from "../../assets/icons/exit-menu.svg";
+import "./nav-bar.css";
 
-import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function NavBar() {
   const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className={visible ? "visible_navigation" : ""}>
+      <nav
+        className={visible ? "visible_navigation" : ""}
+        id={scrollPosition > 150 ? "filled_nav" : ""}
+      >
         <div className="nav_wrapper">
-          <div className="nav_socials">
+          <div className="nav_socials" data-aos="fade-down" data-aos-duration="1800">
             <a href="#" target="_blank">
-              <Instagram />
+              <Instagram className="hover_btn_icon" />
             </a>
             <a href="#" target="_blank">
-              <TG />
+              <TG className="hover_btn_icon" />
             </a>
             <a href="#" target="_blank">
-              <Whatsapp />
+              <Whatsapp className="hover_btn_icon" />
             </a>
             <a href="#" target="_blank">
-              <Facebook />
+              <Facebook className="hover_btn_icon" />
             </a>
             <a href="#" target="_blank">
-              <Advisor />
+              <Advisor className="hover_btn_icon" />
             </a>
           </div>
-          <NavLink to="/">
+          <NavLink to="/" data-aos="fade-down" data-aos-duration="1800">
             <Logo />
           </NavLink>
-          <div className="nav_right">
+          <div className="nav_right" data-aos="fade-down" data-aos-duration="1800">
             <div className="lang_toggler">
               <div>
                 <p>En</p>
@@ -47,9 +73,15 @@ function NavBar() {
             </div>
             <div className="nav_menu_btn">
               {visible ? (
-                <MenuExit onClick={() => setVisible(false)} />
+                <MenuExit
+                  className="hover_btn_icon"
+                  onClick={() => setVisible(false)}
+                />
               ) : (
-                <Menu onClick={() => setVisible(true)} />
+                <Menu
+                  className="hover_btn_icon"
+                  onClick={() => setVisible(true)}
+                />
               )}
             </div>
           </div>
@@ -58,7 +90,7 @@ function NavBar() {
       <div className={visible ? "nav_menu nav_menu_visible" : "nav_menu"}>
         <div className="nav_menu_top_bar">
           <p>Restaurant</p>
-          <button className="header_btn">Reservations</button>
+          <button className="header_btn hover_btn_icon">Reservations</button>
         </div>
         <div className="nav_menu_links">
           <NavLink to="#">

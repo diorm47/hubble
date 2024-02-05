@@ -1,0 +1,21 @@
+<svg width="906.000000" height="113.600098" viewBox="0 0 906 113.6" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_18_55_dd" x="13.699219" y="0.000000" width="110.601562" height="113.600098" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="4"/>
+			<feGaussianBlur stdDeviation="11.4333"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+	</defs>
+	<line id="Line" x1="0.000000" y1="52.247559" x2="906.000000" y2="52.247559" stroke="#FFFFFF" stroke-opacity="0.300000" stroke-width="1.000000"/>
+	<g filter="url(#filter_18_55_dd)">
+		<path id="Soft Star" d="M68.4395 30.8335C68.5176 30.1223 69.4824 30.1223 69.5605 30.8335L70.2207 36.7996C71.0742 44.5037 76.7441 50.5776 83.9336 51.4917L89.502 52.1997C90.166 52.2842 90.166 53.3159 89.502 53.4004L83.9336 54.1084C76.7441 55.0225 71.0742 61.0964 70.2207 68.8003L69.5605 74.7666C69.4824 75.4778 68.5176 75.4778 68.4395 74.7666L67.7793 68.8003C66.9258 61.0964 61.2559 55.0225 54.0664 54.1084L48.498 53.4004C47.834 53.3159 47.834 52.2842 48.498 52.1997L54.0664 51.4917C61.2559 50.5776 66.9258 44.5037 67.7793 36.7996L68.4395 30.8335Z" fill="#BE702D" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
