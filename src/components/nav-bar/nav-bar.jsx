@@ -37,6 +37,21 @@ function NavBar() {
     };
   }, []);
 
+  useEffect(() => {
+    if (visible) {
+      const scrollY = window.scrollY;
+      document.body.style.overflow = "hidden";
+      document.body.style.width = "100%";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      const scrollY = document.body.style.top;
+      document.body.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    }
+  }, [visible]);
   return (
     <>
       <nav
@@ -44,7 +59,11 @@ function NavBar() {
         id={scrollPosition > 150 ? "filled_nav" : ""}
       >
         <div className="nav_wrapper">
-          <div className="nav_socials" data-aos="fade-down" data-aos-duration="1800">
+          <div
+            className="nav_socials"
+            data-aos="fade-down"
+            data-aos-duration="2300"
+          >
             <a href="#" target="_blank">
               <Instagram className="hover_btn_icon" />
             </a>
@@ -61,10 +80,14 @@ function NavBar() {
               <Advisor className="hover_btn_icon" />
             </a>
           </div>
-          <NavLink to="/" data-aos="fade-down" data-aos-duration="1800">
+          <NavLink to="/" data-aos="fade-down" data-aos-duration="2300">
             <Logo />
           </NavLink>
-          <div className="nav_right" data-aos="fade-down" data-aos-duration="1800">
+          <div
+            className="nav_right"
+            data-aos="fade-down"
+            data-aos-duration="2300"
+          >
             <div className="lang_toggler">
               <div>
                 <p>En</p>

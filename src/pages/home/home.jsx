@@ -10,6 +10,7 @@ import "./home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import history from "../../assets/images/history.png";
+import HomeCarousel from "../../components/home-carousel/home-carousel";
 
 function Home() {
   useEffect(() => {
@@ -43,7 +44,7 @@ function Home() {
         <div
           className="home_page_wrapper"
           data-aos="fade-down"
-          data-aos-duration="1800"
+          data-aos-duration="2300"
         >
           <h1 className="home_header_title">
             One of Bali’s Best <br /> Shisha Lounges and <br /> Restaurants
@@ -61,17 +62,17 @@ function Home() {
         <section className="history_live">
           <div className="our_history">
             <div className="our_history_left">
-              <h1 data-aos="fade-up" data-aos-duration="1800">
+              <h1 data-aos="fade-up" data-aos-duration="2300">
                 Our History
               </h1>
-              <div data-aos="fade-right" data-aos-duration="1800">
-                <HistoryLine />
+              <div data-aos="fade-right" data-aos-duration="2300">
+                <HistoryLine className="history_line_1" />
               </div>
 
               <p
                 className="his_desc"
                 data-aos="fade-up"
-                data-aos-duration="1800"
+                data-aos-duration="2300"
               >
                 {" "}
                 Hubble is an elegant restaurant, shisha lounge and cocktail bar
@@ -81,7 +82,7 @@ function Home() {
               <div
                 className="history_counter"
                 data-aos="fade-up"
-                data-aos-duration="1800"
+                data-aos-duration="2300"
               >
                 <Counter />
                 <p>
@@ -93,7 +94,7 @@ function Home() {
               <div
                 className="history_line_2"
                 data-aos="fade-right"
-                data-aos-duration="1800"
+                data-aos-duration="2300"
               ></div>
             </div>
             <div className="our_history_right">
@@ -106,17 +107,20 @@ function Home() {
             </div>
           </div>
           <div className="our_live">
-            <h1 data-aos="fade-up" data-aos-duration="1800">
+            <h1 data-aos="fade-up" data-aos-duration="2300">
               OUR LIVE
             </h1>
-            <div data-aos="fade-up" data-aos-duration="1800">
+            <div data-aos="fade-up" data-aos-duration="2300">
               <LiveLine className="our_live_line" />
+            </div>
+            <div className="carousel_wrapper" data-aos="fade-up" data-aos-duration="2300">
+              <HomeCarousel />
             </div>
           </div>
         </section>
       </div>
       <section className="events">
-        <h1 data-aos="fade-right" data-aos-duration="1800">
+        <h1 data-aos="fade-right" data-aos-duration="2300">
           Events
         </h1>
         <div data-aos="fade-right" data-aos-duration="2000">
@@ -126,7 +130,7 @@ function Home() {
         <div
           className="events_desc"
           data-aos="fade-up"
-          data-aos-duration="1800"
+          data-aos-duration="2300"
         >
           <p>
             Everyday, special events or weekend hangouts, everyone has their
@@ -137,7 +141,7 @@ function Home() {
           <div
             className="events_cards_line"
             data-aos="fade-up"
-            data-aos-duration="1800"
+            data-aos-duration="2300"
           >
             <EventsLine2 />
           </div>
@@ -194,20 +198,23 @@ function Home() {
         </div>
       </section>
       <section className="last_section">
-        <div
-          className="last_section_content"
-          data-aos="fade-right"
-          data-aos-duration="1800"
-        >
-          <div>
-            <Star />
-            <p>OPEN DAILY </p>
+        <div className="last_section_wrapper">
+          <div
+            className="last_section_content"
+            data-aos="fade-right"
+            data-aos-duration="2300"
+          >
+            <div>
+              <Star />
+              <p>OPEN DAILY </p>
+            </div>
+            <div className="working_time">
+              <p>09.00 AM - 02.00 AM</p>
+            </div>
+            <button className="last_section_route hover_btn_icon">ROUTE</button>
           </div>
-          <div className="working_time">
-            <p>09.00 AM - 02.00 AM</p>
-          </div>
-          <button className="last_section_route hover_btn_icon">ROUTE</button>
         </div>
+
         <div className="last_section_footer">
           <p>© Hubble Restaurant and Shisha Lounge 2024.</p>
           <a href="mailto:es@hubblebali.com" target="_blank">

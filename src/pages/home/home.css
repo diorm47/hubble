@@ -80,10 +80,13 @@
 }
 .our_history {
   padding-top: 140px;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
 }
-.our_history_left {
+/* .our_history_left {
   width: 100%;
-}
+} */
 .our_history_left h1 {
   color: rgb(255, 255, 255);
   font-family: Fundamental;
@@ -107,7 +110,7 @@
   text-transform: uppercase;
   max-width: 735px;
   padding-left: 48px;
-  margin-top: 55px;
+
   margin-bottom: 44px;
 }
 .history_counter {
@@ -125,7 +128,9 @@
   gap: 22px;
   margin-left: 48px;
 }
-
+/* .history_line_1 {
+  margin-right: -10px;
+} */
 .history_counter {
   color: rgb(255, 255, 255);
   font-family: Poppins;
@@ -143,7 +148,9 @@
   justify-content: space-between;
 }
 .our_history_right {
-  padding-right: 48px;
+
+  position: absolute;
+  right: -9px;
 }
 .our_history_right img {
   box-sizing: border-box;
@@ -170,6 +177,8 @@
 
 .events {
   background: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .events h1 {
   color: rgb(0, 0, 0);
@@ -326,12 +335,12 @@
 }
 
 .last_section {
-  background: url(../../assets/images/map.svg);
+  background: url(../../assets/images/map.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 750px;
-  padding-left: 180px;
+
   padding-top: 300px;
   display: flex;
   flex-direction: column;
@@ -339,6 +348,14 @@
   padding-bottom: 25px;
 }
 
+.last_section_wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 .last_section_content div {
   display: flex;
   align-items: center;
@@ -442,7 +459,8 @@
 }
 
 .history_line_2 {
-  width: 100%;
+  width: 1014px;
+ 
   height: 1px;
   background: rgba(255, 255, 255, 0.3);
   margin-top: 66px;
