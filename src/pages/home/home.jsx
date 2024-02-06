@@ -5,6 +5,7 @@ import { ReactComponent as EventsLine } from "../../assets/icons/events-line.svg
 import { ReactComponent as HistoryLine } from "../../assets/icons/history-line.svg";
 import { ReactComponent as LiveLine } from "../../assets/icons/our-live-line.svg";
 import { ReactComponent as Star } from "../../assets/icons/star.svg";
+
 import "./home.css";
 
 import AOS from "aos";
@@ -38,6 +39,7 @@ function Home() {
   };
 
   const scrollToMyRef = () => smoothScrollTo(myRef.current);
+
   return (
     <>
       <header className="page_wrapper home_page">
@@ -113,12 +115,17 @@ function Home() {
             <div data-aos="fade-up" data-aos-duration="2300">
               <LiveLine className="our_live_line" />
             </div>
-            <div className="carousel_wrapper" data-aos="fade-up" data-aos-duration="2300">
+            <div
+              className="carousel_wrapper"
+              data-aos="fade-up"
+              data-aos-duration="2300"
+            >
               <HomeCarousel />
             </div>
           </div>
         </section>
       </div>
+
       <section className="events">
         <h1 data-aos="fade-right" data-aos-duration="2300">
           Events
