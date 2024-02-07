@@ -80,7 +80,7 @@ function NavBar() {
               <Advisor className="hover_btn_icon" />
             </a>
           </div>
-          <NavLink to="/" data-aos="fade-down" data-aos-duration="2300">
+          <NavLink to="/" data-aos="fade-down" data-aos-duration="2300" className='nav_logo'>
             <Logo />
           </NavLink>
           <div

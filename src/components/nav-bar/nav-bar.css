@@ -16,8 +16,13 @@ nav {
   justify-content: space-between;
 }
 #filled_nav {
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9248949579831933) 53%, rgba(0,0,0,0.499124649859944) 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.9248949579831933) 53%,
+    rgba(0, 0, 0, 0.499124649859944) 100%
+  );
 }
 .nav_socials {
   display: flex;
@@ -58,7 +63,7 @@ nav {
   z-index: 11;
 
   transition: all 0.6s ease;
-  transform: translateY(-120%);
+  transform: translateY(-1000px);
 }
 .nav_menu_visible {
   transition: all 0.6s ease;
@@ -83,6 +88,9 @@ nav {
   line-height: 168px;
   letter-spacing: 0%;
   text-align: center;
+  text-transform: uppercase;
+}
+.nav_menu_top_bar button {
   text-transform: uppercase;
 }
 
@@ -112,4 +120,90 @@ nav {
 
 .visible_navigation {
   background: #000;
+}
+
+@media only screen and (max-width: 1180px) {
+  .nav_menu_top_bar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .nav_menu_top_bar {
+    padding: 18px 15px 24px;
+  }
+  .nav_menu_links {
+    padding: 22px 15px;
+  }
+  .nav_menu_top_bar p {
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 60px;
+    letter-spacing: 0%;
+
+    text-transform: uppercase;
+  }
+  .nav_menu_top_bar button {
+    padding: 15px 50px;
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .nav_menu_links p {
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 43px;
+    letter-spacing: 0%;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav_wrapper {
+    padding: 0 0 0 16px;
+  }
+  nav {
+    padding: 10px 0;
+  }
+  .nav_socials {
+    gap: 0;
+  }
+  .nav_socials svg {
+    transform: scale(0.8);
+  }
+  .nav_logo svg {
+    width: 120px;
+  }
+  .lang_toggler div {
+    gap: 0;
+  }
+  .lang_toggler div p {
+    font-size: 12px;
+  }
+  .lang_toggler svg,
+  .nav_menu_btn svg {
+    transform: scale(0.5);
+  }
+  .nav_right {
+    gap: 0px;
+  }
+  .lang_toggler {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav_menu_top_bar button {
+    width: 100%;
+  }
+  .nav_menu_visible {
+    top: 73px;
+  }
 }

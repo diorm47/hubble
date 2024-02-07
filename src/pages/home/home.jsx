@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { ReactComponent as Counter } from "../../assets/icons/counters.svg";
 import { ReactComponent as EventsLine2 } from "../../assets/icons/events-line-2.svg";
 import { ReactComponent as EventsLine } from "../../assets/icons/events-line.svg";
+import eventsLineMOb2 from "../../assets/icons/events-mob-line.png"
+import { ReactComponent as EventsLineMOb } from "../../assets/icons/live-line-mob.svg";
 import { ReactComponent as HistoryLine } from "../../assets/icons/history-line.svg";
 import { ReactComponent as LiveLine } from "../../assets/icons/our-live-line.svg";
 import { ReactComponent as Star } from "../../assets/icons/star.svg";
@@ -11,6 +13,8 @@ import "./home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import history from "../../assets/images/history.png";
+import { ReactComponent as HistoryMOb } from "../../assets/images/mob-history-right.svg";
+
 import HomeCarousel from "../../components/home-carousel/home-carousel";
 
 function Home() {
@@ -106,6 +110,7 @@ function Home() {
                 data-aos="zoom-in"
                 data-aos-duration="2000"
               />
+              <HistoryMOb />
             </div>
           </div>
           <div className="our_live">
@@ -114,6 +119,7 @@ function Home() {
             </h1>
             <div data-aos="fade-up" data-aos-duration="2300">
               <LiveLine className="our_live_line" />
+              <EventsLineMOb className="our_live_line_mob" />
             </div>
             <div
               className="carousel_wrapper"
@@ -131,7 +137,9 @@ function Home() {
           Events
         </h1>
         <div data-aos="fade-right" data-aos-duration="2000">
-          <EventsLine className="events_line" />
+          <EventsLine className="events_line desc_line" />
+  
+          <img src={eventsLineMOb2} className="mob_line events_line_mob" alt="" />
         </div>
 
         <div

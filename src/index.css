@@ -17,3 +17,6 @@ a {
   transition: all 0.4s ease;
   opacity: 0.7;
 }
+.page_content {
+  overflow: hidden;
+}

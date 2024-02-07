@@ -82,7 +82,6 @@
 .carousel_item_content {
   position: relative;
   transition: all 0.4s ease;
-
 }
 .carousel_item_desc {
   display: flex;
@@ -111,4 +110,38 @@
   letter-spacing: 3%;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  .slick-center .carousel_item {
+    width: 278.93px;
+    height: 450.18px;
+  }
+  .slick-center,
+  .slick-center .main_page_carousel_item {
+    width: 278.93px !important;
+  }
+  .main_page_carousel_item {
+    height: 450px !important;
+  }
+  .slick-center {
+    margin: 0;
+  }
+  .carousel_video_play svg {
+    transform: scale(0.75);
+    top: 0;
+  }
+  .slick-center .carousel_video_play {
+    top: -40px;
+  }
+  .slick-list {
+    height: 450px !important;
+  }
+  .car_next_arr {
+    right: 15px;
+  }
+  .car_prev_arr {
+    left: 15px;
+  }
+
 }
