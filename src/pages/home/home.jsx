@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { ReactComponent as Counter } from "../../assets/icons/counters.svg";
 import { ReactComponent as EventsLine2 } from "../../assets/icons/events-line-2.svg";
 import { ReactComponent as EventsLine } from "../../assets/icons/events-line.svg";
-import eventsLineMOb2 from "../../assets/icons/events-mob-line.png"
+import eventsLineMOb2 from "../../assets/icons/events-mob-line.png";
 import { ReactComponent as EventsLineMOb } from "../../assets/icons/live-line-mob.svg";
 import { ReactComponent as HistoryLine } from "../../assets/icons/history-line.svg";
 import { ReactComponent as LiveLine } from "../../assets/icons/our-live-line.svg";
@@ -138,8 +138,12 @@ function Home() {
         </h1>
         <div data-aos="fade-right" data-aos-duration="2000">
           <EventsLine className="events_line desc_line" />
-  
-          <img src={eventsLineMOb2} className="mob_line events_line_mob" alt="" />
+
+          <img
+            src={eventsLineMOb2}
+            className="mob_line events_line_mob"
+            alt=""
+          />
         </div>
 
         <div
@@ -226,7 +230,11 @@ function Home() {
             <div className="working_time">
               <p>09.00 AM - 02.00 AM</p>
             </div>
-            <button className="last_section_route hover_btn_icon">ROUTE</button>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Hubble&travelmode=driving" target="_blank">
+              <button className="last_section_route hover_btn_icon">
+                ROUTE
+              </button>
+            </a>
           </div>
         </div>
 

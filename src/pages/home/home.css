@@ -680,15 +680,15 @@
     text-align: left;
     text-transform: uppercase;
   }
-  .last_section_route, .last_section_content  {
+  .last_section_route,
+  .last_section_content {
     width: 100%;
   }
   .last_section_route {
     background: #000;
     box-sizing: border-box;
-border: 1px solid rgb(255, 255, 255);
-border-radius: 100px;
-opacity: 1;
-
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 100px;
+    opacity: 1;
   }
 }

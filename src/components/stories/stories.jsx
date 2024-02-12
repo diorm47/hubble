@@ -4,7 +4,7 @@ import Stories from "react-insta-stories";
 function StoriesCarousel() {
   const stories = [
     {
-      url: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      url: "https://www.instagram.com/stories/highlights/17922835205718087/",
       type: "video",
       header: {
         heading: "MASTERPIECES",

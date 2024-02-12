@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { ReactComponent as ArrowDown } from "../../assets/icons/arrow-down.svg";
 import { ReactComponent as MenuExit } from "../../assets/icons/exit-menu.svg";
 import { ReactComponent as Menu } from "../../assets/icons/menu.svg";
-import { ReactComponent as Advisor } from "../../assets/icons/socials/advisor.svg";
-import { ReactComponent as Facebook } from "../../assets/icons/socials/facebook.svg";
 import { ReactComponent as Instagram } from "../../assets/icons/socials/instagram.svg";
 import { ReactComponent as TG } from "../../assets/icons/socials/tg.svg";
 import { ReactComponent as Whatsapp } from "../../assets/icons/socials/whatsapp.svg";
@@ -64,23 +62,22 @@ function NavBar() {
             data-aos="fade-down"
             data-aos-duration="2300"
           >
-            <a href="#" target="_blank">
+            <a href="https://www.instagram.com/hubblebali" target="_blank">
               <Instagram className="hover_btn_icon" />
             </a>
-            <a href="#" target="_blank">
+            <a href="https://t.me/HubbleFamilybot" target="_blank">
               <TG className="hover_btn_icon" />
             </a>
-            <a href="#" target="_blank">
+            <a href="https://wa.me/6281138839888" target="_blank">
               <Whatsapp className="hover_btn_icon" />
             </a>
-            <a href="#" target="_blank">
-              <Facebook className="hover_btn_icon" />
-            </a>
-            <a href="#" target="_blank">
-              <Advisor className="hover_btn_icon" />
-            </a>
           </div>
-          <NavLink to="/" data-aos="fade-down" data-aos-duration="2300" className='nav_logo'>
+          <NavLink
+            to="/"
+            data-aos="fade-down"
+            data-aos-duration="2300"
+            className="nav_logo"
+          >
             <Logo />
           </NavLink>
           <div
@@ -88,12 +85,12 @@ function NavBar() {
             data-aos="fade-down"
             data-aos-duration="2300"
           >
-            <div className="lang_toggler">
+            {/* <div className="lang_toggler">
               <div>
                 <p>En</p>
                 <ArrowDown />
               </div>
-            </div>
+            </div> */}
             <div className="nav_menu_btn">
               {visible ? (
                 <MenuExit
@@ -113,7 +110,9 @@ function NavBar() {
       <div className={visible ? "nav_menu nav_menu_visible" : "nav_menu"}>
         <div className="nav_menu_top_bar">
           <p>Restaurant</p>
-          <button className="header_btn hover_btn_icon">Reservations</button>
+          <a href="https://t.me/HubbleFamilybot" target="_blank">
+            <button className="header_btn hover_btn_icon">Reservations</button>
+          </a>
         </div>
         <div className="nav_menu_links">
           <NavLink to="#">
@@ -128,9 +127,7 @@ function NavBar() {
           <NavLink to="#">
             <p>MENU</p>
           </NavLink>
-          <NavLink to="#">
-            <p>NEWS</p>
-          </NavLink>
+
           <NavLink to="#">
             <p>EVENT</p>
           </NavLink>
