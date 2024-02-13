@@ -230,7 +230,10 @@ function Home() {
             <div className="working_time">
               <p>09.00 AM - 02.00 AM</p>
             </div>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Hubble&travelmode=driving" target="_blank">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Hubble&travelmode=driving"
+              target="_blank"
+            >
               <button className="last_section_route hover_btn_icon">
                 ROUTE
               </button>
